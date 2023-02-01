@@ -1,0 +1,34 @@
+header{
+    background-color: greenyellow;
+    text-align: center;
+    font-size: 60px;
+
+
+}
+nav{
+    background-color: grey;
+    display: flex;
+    flex-direction: row;
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+}
+.menuItem{
+    padding-right: 10%;
+    padding-left: 10%;
+}
+section{
+    background-color: chocolate;
+}
+footer{
+    background-color: black;
+}
+aside{
+    background-color: beige;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
