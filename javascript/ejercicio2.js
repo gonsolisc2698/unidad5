@@ -1,7 +1,6 @@
-const celta={
+const celta ={
     dia:4,
-    mes:'julio',
-
+    mes:'julio'
 };
 
 console.log(`mi cumpleaños es el ${celta.dia} de ${celta.mes}`);
