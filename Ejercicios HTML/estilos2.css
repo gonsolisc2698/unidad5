@@ -1,0 +1,39 @@
+header{
+    background-color: greenyellow;
+    font-size: 10px;
+    color: black;
+
+}
+aside{
+    background-color: green;
+    color: rgb(218, 207, 207);
+}
+footer{
+    background-color: brown;
+    color: white;
+}
+section{
+    text-align: right;
+    margin-right: 2%;
+    margin-top: -9.15%;
+}
+article{
+    background-color: blue;
+    color: gold;
+}
+.titulo{
+    color: black;
+    text-decoration: underline;
+    margin-left: 1.5%;
+    font-weight: bold;
+}
+ul{
+    list-style: lower-greek;
+   
+}
+ol{
+    list-style: lower-roman;
+}
+.estileForProf{
+    list-style:lower-alpha;
+}
