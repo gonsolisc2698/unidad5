@@ -5,36 +5,42 @@ header{
 
 }
 
+.listaEducacion{
+    margin-left: 1.5%;
+}
+
 aside{
     background-color: violet;
     color: white;
 }
+
 .educacion{
     background-color: brown;
     color: white;
 }
+
 section{
     text-align: right;
     margin-right: 2%;
     margin-top: -10%;
 }
+
 .habilidades{
     background-color: blue;
     color: white;
 }
+
 .titulo{
     color: yellow;
     text-decoration: underline;
     margin-left: 1.5%;
     font-weight: bold;
 }
+
 ul{
-    list-style:lower-greek;
-}
-ol{
-    list-style: lower-roman;
-}
-.estileForProf{
-    list-style:lower-alpha;
+    list-style:square;
 }
 
+.listahabilidades{
+    margin-left: 1.5%;
+}
