@@ -4,32 +4,32 @@ header{
     color: black;
 
 }
+
 aside{
-    background-color: green;
-    color: rgb(218, 207, 207);
+    background-color: violet;
+    color: white;
 }
-footer{
+.educacion{
     background-color: brown;
     color: white;
 }
 section{
     text-align: right;
     margin-right: 2%;
-    margin-top: -9.15%;
+    margin-top: -10%;
 }
-article{
+.habilidades{
     background-color: blue;
-    color: gold;
+    color: white;
 }
 .titulo{
-    color: black;
+    color: yellow;
     text-decoration: underline;
     margin-left: 1.5%;
     font-weight: bold;
 }
 ul{
-    list-style: lower-greek;
-   
+    list-style:lower-greek;
 }
 ol{
     list-style: lower-roman;
@@ -37,3 +37,4 @@ ol{
 .estileForProf{
     list-style:lower-alpha;
 }
+
