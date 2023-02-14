@@ -8,15 +8,17 @@ header{
 nav{
     background-color: grey;
     display: flex;
-    flex-direction: row;
+    flex-direction: colum;
 }
 .menu{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 .menuItem{
     padding-right: 10%;
     padding-left: 10%;
+    display: flex;
+    flex-direction: column;
 }
 section{
     background-color: chocolate;

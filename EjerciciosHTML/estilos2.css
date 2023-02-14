@@ -52,7 +52,7 @@ aside{
 @media  (max-width: 800px) {
     header{
         background-color: rgb(23, 23, 23);
-        font-size: 15px;
+        font-size: 10px;
         color: yellowgreen;
         text-align: center;
     }
