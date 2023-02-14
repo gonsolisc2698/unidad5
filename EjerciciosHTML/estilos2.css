@@ -6,6 +6,7 @@ header{
 .listaEducacion{
     font-size: 18px;
     margin-left: 0%;
+    text-align: justify;
 }
 aside{
     font-size: 18px;
@@ -36,14 +37,17 @@ aside{
     text-decoration: underline;
     margin-left: 2%;
     font-weight: bold;
+    
 }
 .listaexp{
     font-size: 18px;
     margin-left: 0%;
+    text-align: justify;
 }
 .listahabilidades{
     font-size: 18px;
     margin-left: 0%;
+    text-align: justify;
 }
 @media  (max-width: 800px) {
     header{
