@@ -1,11 +1,11 @@
-function capturartexto{(
+function capturartexto(){
     var texto = document.getElementById("opinion").value;
     document.getElementById("rellenar").innerHTML = opinion;
 
-)
+
 }
 //controle lo que escriba el usario
-var textarea = document.getElementById('opinion');
+var textarea = document.getElementById('opinion').value;
 textarea.addEventListener('keyup', ckeckenter);
 
 

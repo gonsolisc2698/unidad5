@@ -8,15 +8,16 @@
 </head>
 <body>
     <p><b>Escribe tu opinión</b></p>
-    <textarea name="opinion">
+    <textarea name="opinion" id="opinion">
 
     </textarea>
     <br>
     <br>
-    <button type="button" onclick=escribir()>Botón</button>
+    <button type="button" onclick="capturartexto()">Botón</button>
     <br>
     <br>
     <h3>El usuario le ha dicho que</h3>
-    <p id="opinion">El usuario ha dicho que <spam id="rellenar"></spam></p>
+    <p id="rellenar">El usuario ha dicho que <span id="rellenar"></span></p>
+    <script src="opinion.js"></script>
 </body>
 </html>
