@@ -1,4 +1,18 @@
-aside{
-    background-color: yellowgreen;
-    color: white;
+.btn {
+    font-size: 24px;
+}
+.custom {
+    font-size: 10px;
+}
+.botones {
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 600px) {
+    body {
+        background-color: blueviolet;
+    }
+    .botones {
+        flex-direction: row;
+    }
 }
