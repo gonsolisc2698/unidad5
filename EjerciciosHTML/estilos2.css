@@ -1,6 +1,7 @@
+
 header{
     background-color: greenyellow;
-    font-size: 40px;
+    font-size: 20px;
     color: black;
 }
 .listaEducacion{
@@ -20,7 +21,6 @@ aside{
 .cabecero{
     text-align: right;
     margin-right: 2%;
-    margin-top: -13%;
     font-size: 16px;
 }
 .Imprimir{
@@ -55,6 +55,10 @@ aside{
         font-size: 10px;
         color: yellowgreen;
         text-align: center;
+    }
+    estilo img{
+        
+        
     }
    .cabecero{
         text-align: center;
