@@ -56,9 +56,8 @@ aside{
         color: yellowgreen;
         text-align: center;
     }
-    estilo img{
-        
-        
+    .estilo img{
+        padding: 3%;
     }
    .cabecero{
         text-align: center;
