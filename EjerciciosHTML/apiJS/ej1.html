@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi primer Mapa GSC</title>
+    <link rel="stylesheet" href="https://js.arcgis.com/3.42/esri/css/esri.css">
+    <script src="https://js.arcgis.com/3.42/"></script>
+    <script src="index.js"></script>
+    <style>
+        html, body, #divMap{
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .boton{
+            position: absolute;
+            z-index: 1;
+            top: 10px;
+            right: 10px;
+            color: gray;
+        }
+        #level{
+            position: absolute;
+            z-index: 1;
+            top: 40px;
+            right: 10px;
+            background-color: white;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="boton">
+    <button id="btn">Vámonos</button>
+    </div>
+    <div id='level'></div>
+    <div id="divMap"></div>
+</body>
+
+
+</html>
