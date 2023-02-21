@@ -12,8 +12,10 @@ require(
             zoom: 6
         });
 
-        var s = new Search({
+        var search = new Search({
          map: map,
+         maxSuggestions: 2,
+         minCharacters: 4,
         },"divSearch");
     }
 );
