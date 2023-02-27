@@ -19,7 +19,7 @@ require(
         var myMap = new Map("divMap", {
             basemap: 'satellite',
            center: [-98.57, 39.83],
-            zoom: 5
+            zoom: 8
         });
         //url1
         var USA = new ArcGISDynamicMapServiceLayer('http://sampleserver6.arcgisonline.com/arcgis/rest/services/USA/MapServer', {
@@ -30,9 +30,10 @@ require(
 
        //url2
         var urlTerremotos = 'https://services.arcgis.com/ue9rwulIoeLEI9bj/ArcGIS/rest/services/Earthquakes/FeatureServer/0'
-        var Terremotos = new FeatureLayer(urlTerremotos);
+        var Terremotos = new FeatureLayer(urlTerremotos, {
+            outFields: ["FID", "MAGNITUDE"]
+        });
         // Construct the Quakes layer - Mostrar solo los de magnitud mayor de 2
-        Terremotos.setDefinitionExpression("MAGNITUDE > 2");
 
         myMap.addLayers([USA, Terremotos]);
      
@@ -47,8 +48,8 @@ require(
             toolbar.on("draw-end", displayPolygon);
         }
         // Mostrar el polígono dibujado
-        function displayPolygon(results){
-            var geometryInput = results.geometry;
+        function displayPolygon(evt){
+            var geometryInput = evt.geometry;
 
             var tbDrawSymbol = new SimpleFillSymbol(
                 SimpleFillSymbol.STYLE_SOLID,
@@ -59,11 +60,10 @@ require(
                 new Color([255, 255, 0, 0.2])
               );
             var graphic = new Graphic(geometryInput, tbDrawSymbol);
+            myMap.graphics.clear(graphic);
             myMap.graphics.add(graphic);
-
-            selectEarthquakes(results.geometry)
+            selectEarthquakes(evt.geometry)
         }
-
         function selectEarthquakes (geoInput) {
             var consulta = new Query();
             consulta.geometry = geoInput;
@@ -75,7 +75,20 @@ require(
             Terremotos.setSelectionSymbol(marker)
             
         }
+        Terremotos.on('selection-complete', listQuakes);
+        function listQuakes(results){
+            var terremotos = results.features;
+            console.log('listQuakes terremotos', terremotos);
+            document.getElementById('lista').innerHTML = ''
+            terremotos.forEach(function (terremoto) {
+                var elementLi = document.createElement("li");
+                var text = `Terremoto de ${terremoto.attributes.FID} de magnitud ${terremoto.attributes.MAGNITUDE}`;
+                elementLi.innerHTML = text;
+                document.getElementById('lista').appendChild(elementLi);
+            })
 
+        }
+    
     }
   );
   
