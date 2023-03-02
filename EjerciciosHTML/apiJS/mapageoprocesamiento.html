@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es-es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://js.arcgis.com/3.43/esri/css/esri.css">
+    <script src="https://js.arcgis.com/3.43/"></script>
+    <title>Viewshed Analysis GSC </title>
+    <style>
+        html,
+        body,
+        #divMap {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #info {
+        bottom: 20px;
+        color: #444;
+        height: auto;
+        font-family: arial;
+        left: 20px;
+        margin: 5px;
+        padding: 10px;
+        position: absolute;
+        text-align: left;
+        width: 200px;
+        z-index: 40;
+        }
+    </style>
+    <script src="mapgeoprosec.js"></script>
+</head>
+<body>
+    <div id="divMap"></div>
+    <div id="info" class="esriSimpleSlider">
+        Click on map to execute ViewShed GP Task.
+      </div>
+</body>
+</html>
