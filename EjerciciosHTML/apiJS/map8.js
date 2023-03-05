@@ -116,26 +116,5 @@ require([
 
       document.getElementById('lista').appendChild(elementLi);
     })
-
-
   }
-
-
-
-
-
-
-
-
-  // function listQuakes(results) {
-  //   var listado = document.getElementById('lista');
-  //   listado.innerHTML = ''
-  //   results.features.map(terremoto => {
-  //     var list = document.createElement('li');
-  //     list.innerHTML = `Terremoto: ${terremoto.attributes.FID} de magnitud ${terremoto.attributes.MAGNITUDE}`;
-      
-  //     listado.appendChild(list)
-  //   });
-  // }
-
 });

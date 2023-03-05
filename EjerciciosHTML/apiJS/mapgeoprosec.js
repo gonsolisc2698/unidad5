@@ -13,7 +13,8 @@ require([
         "esri/Color",
         "dojo/parser",
         "dojo/domReady!"],
-        function (Map,  Geoprocessor, Graphic, graphicsUtils, FeatureSet, LinearUnit, SimpleMarkerSymbol, SimpleLineSymbol, 
+        function (Map,  
+          Geoprocessor, Graphic, graphicsUtils, FeatureSet, LinearUnit, SimpleMarkerSymbol, SimpleLineSymbol, 
         SimpleFillSymbol, Color, parser) {
             // Parse DOM nodes decorated with the data-dojo-type attribute
             parser.parse();

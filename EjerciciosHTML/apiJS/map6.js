@@ -45,7 +45,6 @@ require(
         // 7. Cuando se ha completado la petición se ejecuta mostrarResultados
         locator.on('address-to-locations-complete', mostrarResultados);
         function mostrarResultados(results){ 
-        
             console.log('Geocodificación completada', results);
             // Coordenadas del punto devuelto 
             //s(nos quedamos con el primer candidatos)
@@ -74,7 +73,6 @@ require(
             // hacemos zoom en el punto seleccionado y su texto
             map.centerAndZoom(punto, 16);
         }
-
     }   
 
 
