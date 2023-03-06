@@ -63,7 +63,6 @@ require([
 
   function fPintaYQuery() {
     tb = new Draw(map);
-    ma
     tb.activate(Draw.POLYGON);
 
     tb.on("draw-complete", function (event) {
@@ -75,7 +74,7 @@ require([
       fill.setColor(new Color([255, 255, 0, 0.25]));
 
       var poligono = new Graphic(event.geometry, fill);
-      mapMain.graphics.clear();
+      map.graphics.clear();
       map.graphics.add(poligono);
 
       // Seleccionar ciudades
@@ -104,8 +103,9 @@ require([
 
     var query = new Query();
     query.where = "state_name = ' " + state + " ' "; // "state_name = 'California' "
+    layerStates.selectFeatures(query, FeatureLayer.SELECTION_NEW, goToState);
 
-    layerStates.on('selection-complete', goToState)
+    //layerStates.on('selection-complete', goToState)
   }
 
   function goToState(result) {
