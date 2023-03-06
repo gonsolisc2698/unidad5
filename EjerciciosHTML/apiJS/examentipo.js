@@ -195,7 +195,7 @@ require([
             {
             map: map,
             },
-            "containerSearch"
+            "divSearch"
         );
         busqueda.startup(); 
         var basemapGallery = new BasemapGallery({

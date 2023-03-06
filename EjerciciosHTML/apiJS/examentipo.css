@@ -57,11 +57,10 @@ html, body {
   #tabs{
     padding:5px;
   }
-  #search {
+  #divSearch {
     display: block;
-    position: relative;
+    position: absolute;
     z-index: 2;
-    margin-top: 40px;
-    top: 20%;
-    right: 10px;
-  }
+    top: 25px;
+    left: 75px;
+}
