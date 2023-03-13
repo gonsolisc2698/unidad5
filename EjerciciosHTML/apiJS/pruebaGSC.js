@@ -10,6 +10,8 @@ require([
   "esri/symbols/SimpleLineSymbol",
   "esri/Color",
   "esri/dijit/Search",
+  "esri/dijit/HomeButton",
+  "esri/dijit/Legend",
   "dojo/domReady!",
 ], function (
   Map,
@@ -21,7 +23,9 @@ require([
   SimpleFillSymbol,
   SimpleLineSymbol,
   Color,
-  Search
+  Search,
+  HomeButton,
+  Legend
 ) {
   mapMain = new Map("map", {
     basemap: "topo",
@@ -45,7 +49,7 @@ require([
   mapMain.addLayer(Centros_de_salud);
   params = new ServiceAreaParameters();
   params.defaultBreaks = [5];
-  params.outSpatialReference = map.spatialReference;
+  params.outSpatialReference = mapMain.spatialReference;
   params.returnFacilities = false;
 
   servicioarea = new ServiceAreaTask(
@@ -58,6 +62,7 @@ require([
 
   mapMain.on('click', function() {
     console.log('params', params)
+    
     servicioarea.solve(params,function(solveResult){
         var polygonSymbol = new SimpleFillSymbol(
           "solid",
@@ -68,18 +73,25 @@ require([
         );
         arrayUtils.forEach(solveResult.serviceAreaPolygons, function(servicioarea){
           serviceAreaTask.setSymbol(polygonSymbol);
-          map.graphics.add(servicioarea);
+          mapMain.graphics.add(servicioarea);
         });
       });
   });
   var busqueda = new Search(
     {
-    map: map,
+    map: mapMain,
     },
     "divSearch"
     );
-    busqueda.startup(); 
-
+  busqueda.startup(); 
+  var casa = new HomeButton({
+      map: mapMain,
+  }, "homeDiv");
+  casa.startup();
+  var leyenda = new Legend({
+    map: mapMain,
+  }, 'leyendadiv');
+  leyenda.startup();
   
   
 });
